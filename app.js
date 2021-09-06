@@ -151,5 +151,9 @@ app.post("/changepassword", async (req, res) => {
 });
 
 app.get("/welcome", auth, (req, res) => {
-  res.status(200).send("Welcome!");
+  res.status(200).send("Welcome! You are Authenticated.");
+});
+
+app.get("/", (req, res) => {
+  res.status(200).send("The Endpoints are: /register /login /changepassword /welcome");
 });
